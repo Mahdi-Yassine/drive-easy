@@ -1,3 +1,19 @@
+:root {
+  --navy: #0f172a;
+  --navy-light: #1e293b;
+  --orange: #f97316;
+  --orange-dark: #ea580c;
+  --green: #16a34a;
+  --red: #dc2626;
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --white: #ffffff;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  --max-width: 1200px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +21,19 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
 }
 
 #root {
@@ -16,12 +42,122 @@ body {
   flex-direction: column;
 }
 
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 .page {
   flex: 1;
-  padding: 40px 20px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 16px;
   text-align: center;
 }
 
 .page h1 {
-  color: #1e3a5f;
+  color: var(--navy);
+}
+
+/* Full-width page wrapper (sections set their own width) */
+.page-full {
+  flex: 1;
+  width: 100%;
+}
+
+/* Shared page sections */
+.section {
+  padding: 60px 0;
+  background-color: var(--white);
+}
+
+.section-alt {
+  background-color: var(--white);
+}
+
+.section-title {
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  max-width: 600px;
+  margin: 0 auto 36px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.page-header {
+  padding: 60px 16px;
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.3rem;
+}
+
+.page-header h1 span {
+  color: var(--orange);
+}
+
+.page-header p {
+  color: #cbd5e1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--orange);
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--orange-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--orange);
+  background-color: transparent;
+  color: var(--orange);
+}
+
+.btn-outline:hover {
+  color: var(--white);
+}
+
+.btn:disabled {
+  background-color: var(--muted);
+  cursor: not-allowed;
 }

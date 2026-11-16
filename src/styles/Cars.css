@@ -1,0 +1,49 @@
+.cars-toolbar {
+  max-width: 600px;
+  margin: 0 auto 16px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  background-color: var(--white);
+}
+
+.search-bar:focus-within {
+  border-color: var(--orange);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 11px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.cars-count {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.cars-empty {
+  padding: 60px 20px;
+  border-radius: var(--radius);
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.cars-empty p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
