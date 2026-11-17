@@ -44,9 +44,6 @@ function Cars() {
           ) : (
             <div className="cars-empty">
               <p>No cars match "{search}".</p>
-              <button type="button" className="btn" onClick={() => setSearch("")}>
-                Clear search
-              </button>
             </div>
           )}
         </div>

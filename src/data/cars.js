@@ -12,7 +12,6 @@ import model3 from "../assets/images/model-3.jpg";
 import mustang from "../assets/images/mustang.jpg";
 
 // Initial dynamic list of cars.
-// Photos are from Wikimedia Commons (see IMAGE_CREDITS.md for authors and licences).
 const initialCars = [
   { id: 1, brand: "Toyota", model: "Corolla", year: 2023, type: "Sedan", transmission: "Automatic", pricePerDay: 35, image: corolla },
   { id: 2, brand: "Kia", model: "Sportage", year: 2022, type: "SUV", transmission: "Automatic", pricePerDay: 55, image: sportage },
